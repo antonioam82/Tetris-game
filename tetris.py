@@ -60,4 +60,20 @@ def salir(self):
     print("Salir")
     pygame.quit()
     sys.exit()
+    
+def getPiece(self):
+    return PIEZAS.get(random.choice(PIEZAS_KEYS))
+def _getCurrentPieceColor(self):
+    for l in self.current[0]:
+        for c in l:
+            if c!=0:
+                return c
 
+def _calcularDatosPiezasEnCurso(self):
+    m=self.current[self.position[2]]
+    coords=[]
+    for i in enumerate(m):
+        for j, k in enumerate(l):
+            if k!=0:
+                coords.append([i+self.position[0],j+self.position[1]])
+        self.coordenadas=coords
