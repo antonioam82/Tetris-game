@@ -77,3 +77,18 @@ def _calcularDatosPiezasEnCurso(self):
             if k!=0:
                 coords.append([i+self.position[0],j+self.position[1]])
         self.coordenadas=coords
+
+def _esValida(self, x=0, y=0, r=0):
+    max_x, max_y= DIM TABLERO
+    if r==0:
+        coordenadas=self.coordenadas
+    else:
+        m=self.current[(self.position[2]+r) %len(self.current)]
+        coords=[]
+        for i, l in enumerate(m):
+            for j, k in enumerate(l):
+                if k!=0:
+                    coords.append([i+self.position[0], j+self.position[1]])
+            coordenadas=coords
+            print("Rotación comprobada: %s" % coordenadas)
+            
